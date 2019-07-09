@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML wireframe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="hamburger.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <nav role="navigation">
+      <img class="logo" src="./resources/logo-simple.png" alt="logo"/>
+      <div class="nav-display">
+      <button class="nav-toggle" aria-label="menu">
+      <span class="nav-toggle-outter nav-display">
+        <span class="nav-toggle-inner nav-display">
+          </span>
+        </span>
+      </button>
+      <ul class="nav-content">
+        <li>Welcome!<hr></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      </div>
+    </nav>
+    <main role="main">
+        <header role="banner">
+          <div class='headline1'>
+          <img class="handwritten-hello" src="/Users/stix/lydia_web_development/Projects/portfolio/resources/hello.png" alt="handwritten hello">
+          <div class="intro"><h1>I'm Lydia Hendriks.</h1>
+          <h2>I develop websites.</h2>
+          </div>
+          </div>
+        </header>
+        <section>
+          <div class="content white">
+            <h3>About me..</h3>
+            <ul>
+              <li>Full stack web developer based out of Tampa, FL</li>
+              <li><a href="https://www.123test.com/ISTP-personality-type/">ISTP</a> personality, which means I'm practical + action-oriented</li>
+              <li>I teach power yoga, Jai!</li>
+              <li>Find me sipping kombucha at a local coffee shop</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="content gray">
+            <h3>My Toolkit..</h3>
+            <ul>
+              <li>Front-end: HTML, CSS, JavaScript, jQuery</li>
+              <li>Coming soon: React, Node.js, SQL, Express, JWT</li>
+            </ul>
+            </div>
+        </section>
+
+        <section>
+          <div class="content white">
+            <h3>Projects</h3>
+              <ul class="portfolio">
+                <li>  <!--Boating Quiz App-->
+                    <h4>Boating Quiz</h4>
+                    <img src="/Users/stix/lydia_web_development/Projects/portfolio/resources/boating-quiz-app.png" alt='boating quiz app'
+                  <ul class="app-metadata">
+                    <li class="portfolio-links"><a class="btn" href="https://lhendriks1.github.io/boating-safety-quiz/">Live App &#8594;</a><a class="btn" href="https://github.com/lhendriks1/boating-safety-quiz">Code Repo &#8594;</a><li>
+                    <li>The Boating Safety Quiz app tests users knowledge of boating safety rules and best practices. This quiz was inspired by fiancee who is an avid boater. I made sure he passed this quiz before taking me out.</li>
+                    <li>Technologies used: HTML, CSS, JavaScript, jQuery</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        </section>
+
+        <!-- <section>
+            Project 3
+        </section> -->
+
+        <section class="cta">
+            <p>Want to work together?</p>
+            <p class="subtext">I'd love to chat.</p>
+            <a class="btn" href="#contact">Contact &#8594;</a>
+
+        </section>
+    </main>
+    <footer role="content-info">Footer</footer>
+</body>
+</html>

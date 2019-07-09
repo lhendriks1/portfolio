@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 16px;
+  color: #444;
+  text-align: left;
+  line-height: 1.4;
+}
+
+footer {
+  background-color: #aaa;
+}
+
+header {
+  /*Placehoder image that shows kind of what I'm looking to achieve*/
+  position: relative;
+  background-image: url('https://images.pexels.com/photos/1462639/pexels-photo-1462639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 150px;
+  background-attachment: relative;
+  background-position: center;
+  background-color: rgba(225, 225, 225, .5);
+  background-blend-mode: lighten;
+  padding: 12% 0;
+  margin-top: 63px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+section {
+  padding: 15px;
+  background-color: #fff;
+}
+
+section:nth-child(even) {
+  background-color: #E4E4E4;
+}
+
+div.content:nth-child(even) {
+  background-color: #E4E4E4;
+}
+
+button {
+    cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  max-height: 50px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Nanum Myeongjo', serif;
+  padding: 4px;
+  margin: 0px;
+}
+
+h1{
+font-size: 24px;
+padding: 10px 20px 0px;
+}
+
+h2 {
+    font-size: 16px;
+    padding: 0px 20px;
+}
+
+.headline1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.handwritten-hello {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  transform: rotate(-7deg);
+  height: 60px;
+}
+
+ul {
+  list-style-type: circle;
+  padding: 5px 25px;
+  margin: 0px;
+}
+
+li {
+  padding: 6px;
+}
+
+section > div {
+  padding: 20px;
+  /* margin: 20px; ----add back in for larger screens*/
+}
+
+div.gray {
+  background-color: #E4E4E4;
+}
+
+div.white {
+  background-color: #fff;
+}
+
+ul.portfolio {
+  list-style: none;
+  padding: 4px;
+  margin: 0px;
+}
+
+ul.portfolio img {
+    width: 100%;
+}
+
+ul.portfolio li {
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.app-metadata {
+  font-size: 14px;
+}
+
+a.btn {
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  background-color: transparent;
+  border: 2px solid #E5A449;
+  border-radius: 4px;
+  color: #E5A449;
+  padding: 8px 14px;
+  margin-right: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+ul li.portfolio-links {
+  margin-bottom: 20px;
+}
+
+.cta {
+  padding: 20px;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+}
+
+.cta > p {
+  margin: 4px;
+}
+
+.subtext {
+  font-family: helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+.cta a.btn{
+  font-size: 16px;
+  width: 75%;
+}
+
+/*------CSS for Contact Section-----------*/
+.contact-section {
+  margin-top: 40px;
+  display: flex;
+  padding: 0px;
+}
+
+.contact-section h1 {
+  padding-left: 0px;
+}
+
+.column-1 {
+  width: 50%;
+  height: 500px;
+}
+
+.column-2 {
+  width: 50%;
+}
+
+img.contact {
+  width: 280px;
+  padding: 10px;
+  height: auto;
+}
+
+img.icon {
+  height: 35px;
+}
+
+ul.inline {
+  list-style: none;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.inline>li {
+  margin: 0px;
+  padding-left: 0px;
+  padding-right: 20px;
+}
