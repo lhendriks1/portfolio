@@ -17,8 +17,3 @@ function hideNavOnWindowClick() {
 }
 
 $(hideNavOnWindowClick);
-
-// $(window).click(function(e) {
-//     alert(e.target.id); // gives the element's ID
-//     alert(e.target.className); // gives the elements class(es)
-// });
