@@ -16,7 +16,11 @@ body {
 }
 
 footer {
-  background-color: #aaa;
+  padding: 35px 0px 10px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 header {
@@ -92,6 +96,16 @@ h2 {
   height: 60px;
 }
 
+.underline {
+  height: 15px;
+  display: block;
+  margin: 0px;
+  padding-top: 0px;
+  padding-left: 85px;
+  margin-bottom: 10px;
+  transform: rotate(10deg);
+}
+
 ul {
   list-style-type: circle;
   padding: 5px 25px;
@@ -142,7 +156,7 @@ a.btn {
   border: 2px solid #E5A449;
   border-radius: 4px;
   color: #E5A449;
-  padding: 8px 14px;
+  padding: .5em 1em;
   margin-right: 12px;
   text-transform: uppercase;
   text-decoration: none;
@@ -153,7 +167,7 @@ ul li.portfolio-links {
 }
 
 .cta {
-  padding: 20px;
+  padding: 35px 0px 100px;
   background-color: #000;
   color: white;
   text-align: center;
@@ -174,6 +188,27 @@ ul li.portfolio-links {
 .cta a.btn{
   font-size: 16px;
   width: 75%;
+}
+
+a.contact {
+  color: #fff;
+  border-color: white;
+  padding: 8px 32px;
+}
+
+.return-top {
+  position: absolute;
+  z-index: 18;
+  top: -20px;
+}
+
+img.icon {
+  height: 30px;
+}
+
+img.rotate {
+  transform: rotate(-90deg);
+  height: 40px;
 }
 
 /*------CSS for Contact Section-----------*/
@@ -200,10 +235,6 @@ img.contact {
   width: 280px;
   padding: 10px;
   height: auto;
-}
-
-img.icon {
-  height: 35px;
 }
 
 ul.inline {
