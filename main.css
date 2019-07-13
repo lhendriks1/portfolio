@@ -26,7 +26,7 @@ footer {
 
 header {
   position: relative;
-  background-image: url('/Users/stix/lydia_web_development/Projects/portfolio/resources/bg.png');
+  background-image: url('./resources/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
