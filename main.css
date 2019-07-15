@@ -76,7 +76,6 @@ font-size: 16px;
 
 h2 {
     font-size: 16px;
-    padding: 0px 20px;
 }
 
 /* .headline1 {
@@ -174,9 +173,9 @@ ul.portfolio {
   margin: 0px;
 }
 
-/* ul.portfolio img {
-    width: 100%;
-} */
+ul.portfolio img {
+    width: 90%;
+}
 
 ul.portfolio li {
   padding: 0px;
@@ -312,31 +311,41 @@ ul.inline>li {
 
 
 /*next & prev buttons*/
+.transparent {
+  opacity: .8;
+}
+
 .prev, .next {
-  font-size: 36px;
-  display: inline-block;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
   position: absolute;
-  top: 40%;
-  padding: 16px;
-  color: #fff;
+  top: 50%;
+  padding: 0px;
+  margin: 0px;
+  background-color: rgba(255, 255, 255, 0.5);
   font-weight: 800;
-  border-radius: 0px 3px 3px 3px;
+  border-radius: 50%;
   user-select: none;
 }
 
 /*position next button to right side*/
 .next {
-  right: 1px;
-  border-radius: 3px 0px 0px 3px;
+  left: 27px;
 }
 
 .prev {
-  left: 1px;
-}
+  right: 27px;
+ }
 
 /* On hover add black background */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 24.2px;
+  height: 33px;
+  width: 33px;
 }
 
 /*caption text*/
@@ -375,27 +384,4 @@ ul.inline>li {
 
 .dot:active, .dot:hover, .active {
   background-color: #5b5b5b;
-}
-
-
-/*fading animation*/
-.animate {
-   transition: transform 0.3s ease-out;
- }
-
- .ms-touch.slider {
-  overflow-x: scroll;
-  overflow-y: hidden;
-
-  -ms-overflow-style: none;
-  /* Hides the scrollbar. */
-
-  -ms-scroll-chaining: none;
-  /* Prevents Metro from swiping to the next tab or app. */
-
-  -ms-scroll-snap-type: mandatory;
-  /* Forces a snap scroll behavior on your images. */
-
-  -ms-scroll-snap-points-x: snapInterval(0%, 100%);
-  /* Defines the y and x intervals to snap to when scrolling. */
 }

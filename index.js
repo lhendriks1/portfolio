@@ -26,7 +26,7 @@ $(hideNavOnWindowClick);
 var slideIndex = 0;
 var imageArray = [];
 var NO_BUTTON = 0;
-var PREV_BUTTON = 0-1;
+var PREV_BUTTON = -1;
 var NEXT_BUTTON = 1;
 
 
@@ -79,10 +79,11 @@ function updateImage(button) {
   if(button != NO_BUTTON){
     if(button === PREV_BUTTON){
       slideIndex --;
-      if(slideIndex < 0 ){
+      if(slideIndex <= 0 ){
         slideIndex = imageArray.length -1;
       }
-    } else{
+
+    } else {
       slideIndex ++;
       if(slideIndex >= imageArray.length) {
         slideIndex = 0;
@@ -120,13 +121,3 @@ function handleImageSlider() {
 }
 
 $(handleImageSlider);
-
-// touch swipe animation for image slider
-if (navigator.msMaxTouchPoints) {
-  $('#slider').addClass('ms-touch');
-
-  // Listed for the scroll event and move the image with translate.
-  $('#slider').on('scroll', function() {
-    $('.slide-image').css('transform','translate3d(-' + (100-$(this).scrollLeft()/6) + 'px,0,0)');
-  });
-}
