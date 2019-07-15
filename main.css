@@ -116,7 +116,7 @@ text-align: center;
 text-transform: uppercase;
 font-family: 'Open Sans', sans-serif;
 font-size: 12px;
-color: #727272;
+color: #5b5b5b;
 letter-spacing: 0.4em;
 }
 
@@ -143,8 +143,6 @@ letter-spacing: 0.4em;
 
 ul {
   list-style-type: circle;
-  padding: 5px 25px;
-  margin: 0px;
 }
 
 li {
@@ -176,9 +174,9 @@ ul.portfolio {
   margin: 0px;
 }
 
-ul.portfolio img {
+/* ul.portfolio img {
     width: 100%;
-}
+} */
 
 ul.portfolio li {
   padding: 0px;
@@ -186,7 +184,7 @@ ul.portfolio li {
 }
 
 ul li.portfolio-links {
-  margin-top: 8px;
+  margin-top: 16px;
   margin-bottom: 16px;
 }
 
@@ -206,7 +204,7 @@ a.btn {
 
 .cta {
   padding: 35px 0px 100px;
-  background-color: #1C2737;
+  background-color: #000;
   color: white;
   text-align: center;
   font-size: 22px;
@@ -244,10 +242,14 @@ img.icon {
   height: 30px;
 }
 
-img.rotate {
-  transform: rotate(-90deg);
+img.icon-lg {
   height: 40px;
 }
+
+/* img.rotate {
+  transform: rotate(-90deg);
+  height: 40px;
+} */
 
 /*------CSS for Contact Section-----------*/
 .contact-section {
@@ -286,4 +288,114 @@ ul.inline>li {
   margin: 0px;
   padding-left: 0px;
   padding-right: 20px;
+}
+
+/*----------Slide show styles------------*/
+
+/*hide images by default*/
+.slides {
+  display: none;
+}
+
+.slideshow-container {
+  position: relative;
+  text-align: center;
+  object-fit: cover;
+  margin: 0px;
+  padding: 0px;
+}
+
+.slideshow-container img {
+  width: 100%;
+  margin: 20px 0px 4px;
+}
+
+
+/*next & prev buttons*/
+.prev, .next {
+  font-size: 36px;
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  padding: 16px;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 0px 3px 3px 3px;
+  user-select: none;
+}
+
+/*position next button to right side*/
+.next {
+  right: 1px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.prev {
+  left: 1px;
+}
+
+/* On hover add black background */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*caption text*/
+.text {
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+
+/*number text, 1/3 etc.*/
+.numbertext {
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/*doct, circle indicator*/
+.dots {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 5px 2px;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:active, .dot:hover, .active {
+  background-color: #5b5b5b;
+}
+
+
+/*fading animation*/
+.animate {
+   transition: transform 0.3s ease-out;
+ }
+
+ .ms-touch.slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  -ms-overflow-style: none;
+  /* Hides the scrollbar. */
+
+  -ms-scroll-chaining: none;
+  /* Prevents Metro from swiping to the next tab or app. */
+
+  -ms-scroll-snap-type: mandatory;
+  /* Forces a snap scroll behavior on your images. */
+
+  -ms-scroll-snap-points-x: snapInterval(0%, 100%);
+  /* Defines the y and x intervals to snap to when scrolling. */
 }
