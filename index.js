@@ -1,5 +1,5 @@
-//---------------hamburger functionality-----------
-//when the user clicks the hamburger button it toggles between showing and hiding the nav dropdown
+//START-----HAMBURGER NAV DROPDOWN-------
+//When the user clicks the hamburger button it toggles between showing and hiding the nav dropdown
 function toggleNavEvent(){
   $('.nav-display').click(function(){
     $('.nav-content').toggle();
@@ -19,9 +19,12 @@ function hideNavOnWindowClick() {
 
 $(hideNavOnWindowClick);
 
+//END HAMBURGER FUNCTIONS-----------------------------------------------------
 
 
-//--------------portfolio image slide---------------
+
+
+//START-----PORTFOLIO IMAGE SLIDE---------------
 
 var slideIndex = 0;
 var imageArray = [];
@@ -77,9 +80,9 @@ function updateImage(button) {
 
   // Calculate the index for active slider
   if(button != NO_BUTTON){
-    if(button === PREV_BUTTON){
+    if (button === PREV_BUTTON) {
       slideIndex --;
-      if(slideIndex <= 0 ){
+      if(slideIndex < 0 ){
         slideIndex = imageArray.length -1;
       }
 
@@ -91,15 +94,38 @@ function updateImage(button) {
     }
   }
 
+
+  function hideArrowButtons() {
+    if (slideIndex === 0) {
+    $('.js-prev').hide()
+    }
+      else {
+      $('.js-prev').show()
+      };
+
+    if (slideIndex == imageArray.length-1) {
+    $('.js-next').hide()
+    }
+      else {
+        $('.js-next').show()
+    };
+  }
+
   showCurrentSlide(slideIndex);
+  hideArrowButtons(slideIndex);
+
 }
 
 //listen for next/prev button clicks
 function setupCallbacks() {
 
-  $(".slideshow-container").on("click", ".js-next", NEXT_BUTTON => updateImage());
+  $(".slideshow-container").on("click", ".js-next", function(){
+    updateImage(NEXT_BUTTON);
+  });
 
-  $(".slideshow-container").on("click", ".js-prev", PREV_BUTTON => updateImage());
+  $(".slideshow-container").on("click", ".js-prev", function() {
+    updateImage(PREV_BUTTON);
+  });
 
   $(".dots").on("click", ".js-slider-0", slideIndex => showCurrentSlide(0));
 
@@ -121,3 +147,73 @@ function handleImageSlider() {
 }
 
 $(handleImageSlider);
+
+//END ----IMAGE SLIDER FUNCTIONS---------------------------------------------------
+
+
+
+
+
+//START -----CONTACT FORM FUNCTIONS
+// show & hide the contact form
+
+function handleContactForm() {
+
+  $('.js-contact-show').on('click', function() {
+    $('#contact-form').slideDown();
+  });
+
+  $('button.close').on('click', function(){
+    $('#contact-form').slideUp();
+  })
+}
+
+$(handleContactForm)
+
+//submit the contact FORM
+$("#submit").click(function() {
+
+var name = $("#name").val();
+var email = $("#email").val();
+var message = $("#message").val();
+
+$("#returnmessage").empty(); // To empty previous error/success message.
+
+// Checking for blank fields.
+  if (name == '' || email == '' || contact == '') {
+    alert("Whoops, some info is missing -- please fill out all of the fields");
+  } else {
+
+// Returns successful data submission message when the entered information is stored in database.
+$.post("contact_form.php", {
+  name1: name,
+  email1: email,
+  message1: message,
+  }, function(data) {
+    $("#returnmessage").append(data); // Append returned message to message paragraph.
+    if (data == "Your Query has been received, We will contact you soon.") {
+      $("#form")[0].reset(); // To reset form fields on success.
+    }
+  });
+  }
+});
+
+
+//END ------CONTACT FORM FUNCTIONS--------------------------------------------------------
+
+
+
+
+
+//START------ SCROLL TO ANCHORS
+
+function scrollToAnchors(){
+  $("a[href^=#].internal-link").click(function(e) {
+    e.preventDefault();
+    var dest = $(this).attr('href');
+    console.log(dest);
+    $('html,body').animate({ scrollTop: $(dest).offset().top-100 }, 'slow');
+  });
+}
+
+$(scrollToAnchors)

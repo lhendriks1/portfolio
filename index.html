@@ -23,19 +23,20 @@
       </button>
       <ul class="nav-content">
         <li>Welcome!<hr></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#about" class="internal-link">About</a></li>
+        <li><a href="#toolkit" class="internal-link">Toolkit</a></li>
+        <li><a href="#portfolio" class="internal-link">Portfolio</a></li>
+        <li><a href="#contact" class="internal-link">Contact</a></li>
       </ul>
       </div>
     </nav>
-    <main role="main">
+    <main role="main" id="top">
         <header role="banner">
         </header>
-        <section>
+        <section id="about">
           <div class="content white">
             <h1 class="section-title">lydia hendriks</h1>
-            <p class="emphasis">I'm about creating <span class="uppercase bolder">stunning + efficient</span> websites that are <span class="italic orange">natural + fun</span> to interact with. Using <span class="uppercase bolder">powerful backend-tech</span> to keep websites <span class="italic orange">clean + maintainable</span> .
+            <p class="emphasis">I'm about creating <span class="uppercase bolder">stunning + efficient</span> websites that are <span class="italic orange">natural + fun</span> to interact with. Using <span class="uppercase bolder">powerful backend-tech</span> to keep websites <span class="italic orange">clean + maintainable</span>.
             <hr>
             <p>I'm a full stack developer based out of Tampa, FL. I love bringing life to stunning designs that promote a fluid user experience.</p>
             <p>My background is in management consulting, which gave me ample experience working with stakeholders to understand business needs and design solutions. I repeatedly saw that 1.) web applications were the answers to many of my clients' problems and 2.) many organizations are in <span class="italic">desperate need</span> of more web capabilities.</p>
@@ -49,7 +50,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="toolkit">
           <div class="content gray">
             <h2 class="section-title">full stack toolkit</h2>
             <ul>
@@ -59,7 +60,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="portfolio">
           <div class="content white">
             <h2 class="section-title">Projects</h2>
 
@@ -71,19 +72,16 @@
                     <!--images with caption and number-->
                     <div class="slides animate">
                       <img src="./resources/boat-quiz-img1.png">
-                      <div class="text">Caption Text</div>
                     </div>
                     <div class="slides animate">
-                      <img src="./resources/boat-quiz-img2.png">
-                      <div class="text">Caption Text</div>
+                      <img src="./resources/boat-quiz-img2.png">xs
                     </div>
                     <div class="slides animate">
                       <img src="./resources/boat-quiz-img3.png">
-                      <div class="text">Caption Text</div>
                     </div>
                     <!--next and prev buttons-->
-                    <a class="prev js-prev"><span class="transparent">&#10095;</span></a>
-                    <a class="next js-next"><span class="transparent">&#10094;</span></a>
+                    <a class="prev js-next"><span class="transparent">&#10095;</span></a>
+                    <a class="next js-prev"><span class="transparent">&#10094;</span></a>
                   </div>
 
                   <!--dots and circles-->
@@ -92,17 +90,6 @@
                     <span class="dot js-slider-1"></span>
                     <span class="dot js-slider-2"></span>
                   </div>
-
-
-
-
-
-
-
-
-                  <!-- <a href="https://lhendriks1.github.io/boating-safety-quiz/" target="_blank">
-                    <img src="./resources/boating-quiz-app.png" alt='boating quiz app'>
-                  </a> -->
                   <ul class="app-metadata">
                     <li><span class="bolder">Boating Safety Quiz -</span> The Boating Safety Quiz app tests users knowledge of boating safety rules and best practices. This quiz was inspired by my fiancee who is an avid boater. I made sure he passed this quiz before taking me out.</li>
                     <li>Technologies used: HTML, CSS, JavaScript, jQuery</li>
@@ -117,23 +104,45 @@
             Project 3
         </section> -->
 
-        <section class="cta">
+        <section id="contact" class="cta">
             <p>Want to work together?</p>
             <p class="subtext">I'd love to chat.</p>
-            <a class="btn contact" href="#contact">Contact &#8594;</a>
+            <button class="btn contact js-contact-show">Contact &#8594;</button>
+            <div id="contact-form" class="contact-form">
+              <button type="button" class="close">x close</button>
+              <h2 class="section-title">Contact</h2>
+              <form
+                action="contact-form.php"
+                method="POST"
+                enctype="multipart/form-data"
+                name="EmailForm">
+                <p id="returnmessage"></p>
+                <label for="name">Name</label>
+                <input id="name" type="text">
+                <label for="email">Email</label>
+                <input id="email" type="email">
+                <label for="message">Message</label>
+                <input id="message" type="text">
 
+                <button  id="submit" type="submit" class="submit">Send</button>
+                </form>
+            </div>
         </section>
     </main>
-    <footer role="content-info">
+
+    <footer>
       <div class="return-top">
-      <a title="top of page" href=""><img class="icon-lg" src="./resources/upward-icon.png" alt="arrow-up"></a>
+      <a href="#top" class="internal-link"><img class="icon-lg" src="./resources/upward-icon.png" alt="up arrow"></a>
       </div>
+
       <ul class="inline">
-        <li><a title="GitHub" href=""><img class="icon" src="https://image.flaticon.com/icons/svg/38/38401.svg" alt="GitHub icon"></a></li>
-        <li><a title="LinkedIn" href=""><img class="icon" src="https://image.flaticon.com/icons/svg/121/121509.svg" alt="LinkedIn icon"></a></li>
-        <li><a title="Instagram" href=""><img class="icon" src="https://image.flaticon.com/icons/svg/123/123739.svg" alt="Instagram icon"></a></li>
-        <li><a title="Email" href=""><img class="icon" src="https://image.flaticon.com/icons/svg/121/121521.svg" alt="Email icon"></a></li>
+        <li><a title="GitHub" href="https://github.com/lhendriks1"><img class="icon" src="https://image.flaticon.com/icons/svg/38/38401.svg" alt="GitHub icon"></a></li>
+        <li><a title="LinkedIn" href="https://www.linkedin.com/in/lydiahendriks/"><img class="icon" src="https://image.flaticon.com/icons/svg/121/121509.svg" alt="LinkedIn icon"></a></li>
+        <li><a title="Instagram" href="https://www.instagram.com/lydiahendriks/"><img class="icon" src="https://image.flaticon.com/icons/svg/123/123739.svg" alt="Instagram icon"></a></li>
+        <li><a title="Email" href="mailto:hendriks.lydia@gmail.com"><img class="icon" src="https://image.flaticon.com/icons/svg/121/121521.svg" alt="Email icon"></a></li>
       </ul>
     </footer>
+
 </body>
+
 </html>

@@ -117,6 +117,7 @@ font-family: 'Open Sans', sans-serif;
 font-size: 12px;
 color: #5b5b5b;
 letter-spacing: 0.4em;
+margin: 16px;
 }
 
 .emphasis {
@@ -187,9 +188,9 @@ ul li.portfolio-links {
   margin-bottom: 16px;
 }
 
-a.btn {
+.btn, button.submit {
   font-family: helvetica, sans-serif;
-  /* font-size: 14px; */
+  font-size: 14px;
   font-style: italic;
   background-color: transparent;
   border: 2px solid #E5A449;
@@ -201,10 +202,55 @@ a.btn {
   text-decoration: none;
 }
 
+.contact-form {
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+
+form {
+  display: grid;
+  border: none;
+  /* margin-top: 2rem; */
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr 4fr .5fr;
+  grid-gap: 8px;
+  margin: 10px;
+}
+
+form input {
+  margin-bottom: 1rem;
+  padding: 4px 4px;
+  border: 1px solid #5b5b5b;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#name, #email {
+  grid-column: 2 / 5;
+}
+
+label {
+  grid-column: 1 / 2;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    grid-column: 2 / 8;
+}
+
+button {
+  grid-column: 2/ 3;
+}
+
 .cta {
-  padding: 35px 0px 100px;
+  padding: 35px 0px 50px;
   background-color: #000;
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 22px;
 }
@@ -220,15 +266,24 @@ a.btn {
   padding-bottom: 20px;
 }
 
-.cta a.btn{
+.cta button.btn{
   font-size: 16px;
-  width: 75%;
+  /* width: 75%; */
 }
 
-a.contact {
+button.contact {
+  background-color: #000;
   color: #fff;
   border-color: white;
   padding: 8px 32px;
+}
+
+.icon {
+  height: 30px;
+}
+
+img.icon-lg {
+  height: 40px;
 }
 
 .return-top {
@@ -237,13 +292,6 @@ a.contact {
   top: -20px;
 }
 
-img.icon {
-  height: 30px;
-}
-
-img.icon-lg {
-  height: 40px;
-}
 
 /* img.rotate {
   transform: rotate(-90deg);
@@ -251,7 +299,7 @@ img.icon-lg {
 } */
 
 /*------CSS for Contact Section-----------*/
-.contact-section {
+/* .contact-section {
   margin-top: 40px;
   display: flex;
   padding: 0px;
@@ -274,7 +322,8 @@ img.contact {
   width: 280px;
   padding: 10px;
   height: auto;
-}
+} */
+
 
 ul.inline {
   list-style: none;
@@ -285,8 +334,7 @@ ul.inline {
 
 ul.inline>li {
   margin: 0px;
-  padding-left: 0px;
-  padding-right: 20px;
+  padding: 20px 10px;
 }
 
 /*----------Slide show styles------------*/
@@ -341,7 +389,7 @@ ul.inline>li {
   right: 27px;
  }
 
-/* On hover add black background */
+/* On hover increase size */
 .prev:hover, .next:hover {
   font-size: 24.2px;
   height: 33px;
@@ -384,4 +432,16 @@ ul.inline>li {
 
 .dot:active, .dot:hover, .active {
   background-color: #5b5b5b;
+}
+
+#contact-form {
+  display: none;
+}
+
+
+.close {
+  float: right;
+  color: #5b5b5b;
+  font-family: helvetica, sans-serif;
+  text-transform: uppercase;
 }

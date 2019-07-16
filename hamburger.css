@@ -74,14 +74,14 @@ button.nav-toggle:hover, button.nav-toggle:focus, button.nav-toggle:active {
   right: 0px;
   top: 30px;
   position: absolute;
-  background-color: silver;
+  background-color: #fff;
   min-width: 140px;
   padding: 16px;
 }
 
 /*links inside hamburger*/
 .nav-content a {
-  color: #1C2737;
+  color: #000;
   text-decoration: none;
   display: block;
 }
