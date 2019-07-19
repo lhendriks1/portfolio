@@ -12,15 +12,10 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <nav role="navigation">
+    <nav role="navigation" class="nav">
       <img class="logo" src="./resources/logo-simple.png" alt="logo"/>
-      <div class="nav-display">
-      <button class="nav-toggle" aria-label="menu">
-      <span class="nav-toggle-outter nav-display">
-        <span class="nav-toggle-inner nav-display">
-          </span>
-        </span>
-      </button>
+      <input class="menu-btn" type="checkbox" id="menu-btn"/>
+      <label class="menu-icon" for="menu-btn" role="checkbox"><span class="navicon"></span></label>
       <ul class="nav-content">
         <li>Welcome!<hr></li>
         <li><a href="#about" class="internal-link">About</a></li>
@@ -28,7 +23,6 @@
         <li><a href="#portfolio" class="internal-link">Portfolio</a></li>
         <li><a href="#contact" class="internal-link">Contact</a></li>
       </ul>
-      </div>
     </nav>
     <main role="main" id="top">
         <header role="banner">
@@ -41,7 +35,7 @@
             <hr>
             <p>I'm a full stack developer based out of Tampa, FL. I love bringing life to stunning designs that promote a fluid user experience.</p>
             <p>My background is in management consulting, which gave me ample experience working with stakeholders to understand business needs and design solutions. I repeatedly saw that 1.) web applications were the answers to many of my clients' problems and 2.) many organizations are in <span class="italic">desperate need</span> of more web capabilities.</p>
-            <p>As a craftsman at heart, I love building projects from scatch and want to understand exactly how things work 'under the hood', so to speak. So naturally I found working with CMS too limiting and inefficient. I started to notice bloat, inefficiency, and poor design (triple cringe!). At that point I started learning front-end fundamentals and immediately fell in love with building web applications.</p>
+            <p>As a craftsman at heart, I love building projects from scratch and want to understand exactly how things work 'under the hood', so to speak. So naturally, I found working with CMS too limiting and inefficient. I started to notice bloat, inefficiency, and poor design (triple cringe!). At that point, I started learning front-end fundamentals and immediately fell in love with building web applications.</p>
             <p>Some other things about me are:</p>
             <ul>
               <li>I'm an <a href="https://www.123test.com/ISTP-personality-type/" target="_blank">ISTP</a> personality, which means I'm a 'do-er' who excels when faced with challenges and thrives when results are tangible and immediate.</li>
@@ -68,9 +62,10 @@
             <hr>
 
               <ul class="portfolio">
-                <li>  <!--Boating Quiz App-->
+                <li class="project">  <!--Boating Quiz App-->
 
                   <!--slide show container-->
+                  <div class="left-column">
                   <div class="slideshow-container">
                     <!--images with caption and number-->
                     <div class="slides animate">
@@ -83,8 +78,8 @@
                       <img src="./resources/boat-quiz-img3.png">
                     </div>
                     <!--next and prev buttons-->
-                    <a class="prev js-next"><span class="transparent">&#10095;</span></a>
-                    <a class="next js-prev"><span class="transparent">&#10094;</span></a>
+                    <a class="prev js-prev"><span class="transparent">&#10094;</span></a>
+                    <a class="next js-next"><span class="transparent">&#10095;</span></a>
                   </div>
 
                   <!--dots and circles-->
@@ -93,25 +88,24 @@
                     <span class="dot js-slider-1"></span>
                     <span class="dot js-slider-2"></span>
                   </div>
+                </div>
+                <div class="right-column">
                   <ul class="app-metadata">
-                    <li><span class="bolder">Boating Safety Quiz -</span> The Boating Safety Quiz app tests users knowledge of boating safety rules and best practices. This quiz was inspired by my fiancee who is an avid boater. I made sure he passed this quiz before taking me out.</li>
+                    <li><span class="bolder">Boating Safety Quiz -</span> The Boating Safety Quiz app tests users' knowledge of boating safety rules and best practices. This quiz was inspired by my fiancee who is an avid boater. I made sure he passed this quiz before taking me out.</li>
                     <li>Technologies used: HTML, CSS, JavaScript, jQuery</li>
                       <li class="portfolio-links"><a class="btn" href="https://lhendriks1.github.io/boating-safety-quiz/" target="_blank">Live App &#8594;</a><a class="btn" href="https://github.com/lhendriks1/boating-safety-quiz">Code Repo &#8594;</a><li>
                   </ul>
+                </div>
                 </li>
               </ul>
             </div>
         </section>
 
-        <!-- <section>
-            Project 3
-        </section> -->
-
         <section id="contact" class="cta">
             <p>Want to work together?</p>
             <p class="subtext">I'd love to chat.</p>
-            <button class="btn contact js-contact-show">Contact &#8594;</button>
-            <div id="contact-form" class="contact-form">
+            <a href="mailto:hendriks.lydia@gmail.com"><button class="btn contact js-contact-show">Contact &#8594;</button></a>
+            <!-- <div id="contact-form" class="contact-form">
               <button type="button" class="close">x close</button>
               <h2 class="section-title">Contact</h2>
               <hr>
@@ -130,7 +124,7 @@
 
                 <button  id="submit" type="submit" class="submit">Send</button>
                 </form>
-            </div>
+            </div> -->
         </section>
     </main>
 
@@ -140,10 +134,9 @@
       </div>
 
       <ul class="inline">
-        <li><a title="GitHub" href="https://github.com/lhendriks1"><img class="icon" src="https://image.flaticon.com/icons/svg/38/38401.svg" alt="GitHub icon"></a></li>
-        <li><a title="LinkedIn" href="https://www.linkedin.com/in/lydiahendriks/"><img class="icon" src="https://image.flaticon.com/icons/svg/121/121509.svg" alt="LinkedIn icon"></a></li>
-        <li><a title="Instagram" href="https://www.instagram.com/lydiahendriks/"><img class="icon" src="https://image.flaticon.com/icons/svg/123/123739.svg" alt="Instagram icon"></a></li>
-        <li><a title="Email" href="mailto:hendriks.lydia@gmail.com"><img class="icon" src="https://image.flaticon.com/icons/svg/121/121521.svg" alt="Email icon"></a></li>
+        <li><a title="GitHub" href="https://github.com/lhendriks1" target="_blank"><img class="icon" src="https://image.flaticon.com/icons/svg/38/38401.svg" alt="GitHub icon"></a></li>
+        <li><a title="LinkedIn" href="https://www.linkedin.com/in/lydiahendriks/" target="_blank"><img class="icon" src="https://image.flaticon.com/icons/svg/121/121509.svg" alt="LinkedIn icon"></a></li>
+        <li><a title="Email" href="mailto:hendriks.lydia@gmail.com" target="_blank"><img class="icon" src="https://image.flaticon.com/icons/svg/121/121521.svg" alt="Email icon"></a></li>
       </ul>
     </footer>
 

@@ -1,23 +1,38 @@
-//START-----HAMBURGER NAV DROPDOWN-------
-//When the user clicks the hamburger button it toggles between showing and hiding the nav dropdown
-function toggleNavEvent(){
-  $('.nav-display').click(function(){
-    $('.nav-content').toggle();
-  });
-}
-
-$(toggleNavEvent);
-
-//hides the nav dropdown if the user clicks outside of the dropdown
-function hideNavOnWindowClick() {
-  $('body').on('click', function(e) {
-    if (!$(e.target).parent().hasClass('nav-display')) {
-    $('.nav-content').css('display','none');
-  };
-});
-}
-
-$(hideNavOnWindowClick);
+// //START-----HAMBURGER NAV DROPDOWN-------
+//
+// //On page load check if hamburger nav button is visible,
+// //If it is then isten for clicks to dropdown the menu
+// function toggleNavEvent() {
+//   if ($('button.nav-toggle').is(':visible')) {
+//     $('.nav-display').click(function() {
+//       $('.nav-content').toggle();
+//       });
+//     };
+//   }
+//
+// $(toggleNavEvent)
+//
+//
+// //Listen for window resize, then check if nav hamburger is there. If it is:
+// $(window).on('resize', function() {
+//   if ($(window).width()<420) {
+//     toggleNavEvent(); // listen for clicks to drop-down the hamburger menu
+//   };
+// });
+//
+// //On page load check if the hambuger button is visible
+// //If it is, then listen for clicks outside of the dropdown & close the dropdown when they happen
+// function hideNavOnWindowClick() {
+//   if ($('button.nav-toggle').is(':visible')) {
+//     $('body').on('click', function(e) {
+//       if (!$(e.target).parent().hasClass('nav-display')) {
+//         $('.nav-content').css('display','none');
+//       };
+//     });
+//   }
+// }
+//
+// $(hideNavOnWindowClick);
 
 //END HAMBURGER FUNCTIONS-----------------------------------------------------
 
@@ -54,6 +69,22 @@ function styleDot(slideIndex) {
       }
   }
 
+  function hideArrowButtons() {
+    if (slideIndex === 0) {
+    $('.js-prev').hide()
+    }
+      else {
+      $('.js-prev').show()
+      };
+
+    if (slideIndex == imageArray.length-1) {
+    $('.js-next').hide()
+    }
+      else {
+        $('.js-next').show()
+    };
+  }
+
 //Hide all divs with class .slider, then only show the active index
 function showCurrentSlide(slideIndex) {
 
@@ -66,9 +97,8 @@ imageArray[slideIndex].show();
 
 //apply active sytle to dots
 styleDot(slideIndex);
+hideArrowButtons(slideIndex);
 }
-
-
 
 
 //Updates index based on button parameter, then updates image
@@ -94,25 +124,7 @@ function updateImage(button) {
     }
   }
 
-
-  function hideArrowButtons() {
-    if (slideIndex === 0) {
-    $('.js-prev').hide()
-    }
-      else {
-      $('.js-prev').show()
-      };
-
-    if (slideIndex == imageArray.length-1) {
-    $('.js-next').hide()
-    }
-      else {
-        $('.js-next').show()
-    };
-  }
-
   showCurrentSlide(slideIndex);
-  hideArrowButtons(slideIndex);
 
 }
 
@@ -127,17 +139,25 @@ function setupCallbacks() {
     updateImage(PREV_BUTTON);
   });
 
-  $(".dots").on("click", ".js-slider-0", slideIndex => showCurrentSlide(0));
+  $(".dots").on("click", ".js-slider-0", function() {
+    slideIndex = 0;
+    showCurrentSlide(slideIndex);
+  });
 
+  $(".dots").on("click", ".js-slider-1", function() {
+    slideIndex = 1;
+    showCurrentSlide(slideIndex);
+  });
 
-  $(".dots").on("click", ".js-slider-1", slideIndex => showCurrentSlide(1));
-
-  $(".dots").on("click", ".js-slider-2", slideIndex => showCurrentSlide(2));
+  $(".dots").on("click", ".js-slider-2", function() {
+    slideIndex = 2;
+    showCurrentSlide(slideIndex);
+  });
 
 }
 
 
-//call all functinos to handle imgae slider
+//call all functions to handle imgae slider
 
 function handleImageSlider() {
   createArray(imageArray);
@@ -149,60 +169,6 @@ function handleImageSlider() {
 $(handleImageSlider);
 
 //END ----IMAGE SLIDER FUNCTIONS---------------------------------------------------
-
-
-
-
-
-//START -----CONTACT FORM FUNCTIONS
-// show & hide the contact form
-
-function handleContactForm() {
-
-  $('.js-contact-show').on('click', function() {
-    $('#contact-form').slideDown();
-  });
-
-  $('button.close').on('click', function(){
-    $('#contact-form').slideUp();
-  })
-}
-
-$(handleContactForm)
-
-//submit the contact FORM
-$("#submit").click(function() {
-
-var name = $("#name").val();
-var email = $("#email").val();
-var message = $("#message").val();
-
-$("#returnmessage").empty(); // To empty previous error/success message.
-
-// Checking for blank fields.
-  if (name == '' || email == '' || contact == '') {
-    alert("Whoops, some info is missing -- please fill out all of the fields");
-  } else {
-
-// Returns successful data submission message when the entered information is stored in database.
-$.post("contact_form.php", {
-  name1: name,
-  email1: email,
-  message1: message,
-  }, function(data) {
-    $("#returnmessage").append(data); // Append returned message to message paragraph.
-    if (data == "Your Query has been received, We will contact you soon.") {
-      $("#form")[0].reset(); // To reset form fields on success.
-    }
-  });
-  }
-});
-
-
-//END ------CONTACT FORM FUNCTIONS--------------------------------------------------------
-
-
-
 
 
 //START------ SCROLL TO ANCHORS

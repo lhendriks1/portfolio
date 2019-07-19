@@ -27,7 +27,7 @@ footer {
 
 header {
   position: relative;
-  background-image: url('./resources/bg.png');
+  background-image: url('./resources/bg-300x200.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -58,58 +58,15 @@ button {
     cursor: pointer;
 }
 
-.logo {
-  position: absolute;
-  left: 10px;
-  top: 7px;
-  max-height: 50px;
-}
-
 h1, h2, h3, h4 {
   font-family: 'Nanum Myeongjo', serif;
   padding: 4px;
   margin: 0px;
 }
 
-h1{
+h1, h2 {
 font-size: 16px;
 }
-
-h2 {
-    font-size: 16px;
-}
-
-/* .headline1 {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.headline1 > p {
-  font-size: 22px;
-  margin: 0px 0px 0px 4px;
-  padding: 0px;
-  bottom: 0px;
-}
-
-.handwritten-hello {
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
-  height: 60px;
-  vertical-align: text-bottom;
-
-} */
-
-/* .underline {
-  position: absolute;
-  bottom: 25px;
-  left: 200px;
-  height: 15px;
-  transform: rotate(5deg);
-} */
-
 
 .section-title {
 text-align: center;
@@ -152,7 +109,6 @@ li {
 
 section > div {
   padding: 20px;
-  /* margin: 20px; ----add back in for larger screens*/
 }
 
 div.gray {
@@ -225,7 +181,6 @@ ul li.portfolio-links {
 form {
   display: grid;
   border: none;
-  /* margin-top: 2rem; */
   grid-template-columns: auto;
   grid-template-rows: 1fr 1fr 1fr 4fr .5fr;
   grid-gap: 8px;
@@ -303,39 +258,6 @@ img.icon-lg {
   top: -20px;
 }
 
-
-/* img.rotate {
-  transform: rotate(-90deg);
-  height: 40px;
-} */
-
-/*------CSS for Contact Section-----------*/
-/* .contact-section {
-  margin-top: 40px;
-  display: flex;
-  padding: 0px;
-}
-
-.contact-section h1 {
-  padding-left: 0px;
-}
-
-.column-1 {
-  width: 50%;
-  height: 500px;
-}
-
-.column-2 {
-  width: 50%;
-}
-
-img.contact {
-  width: 280px;
-  padding: 10px;
-  height: auto;
-} */
-
-
 ul.inline {
   list-style: none;
   display: flex;
@@ -368,7 +290,6 @@ ul.inline>li {
   margin: 20px 0px 4px;
 }
 
-
 /*next & prev buttons*/
 .transparent {
   opacity: .8;
@@ -376,35 +297,28 @@ ul.inline>li {
 
 .prev, .next {
   font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  top: 50%;
   padding: 0px;
   margin: 0px;
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
   font-weight: 800;
   border-radius: 50%;
   user-select: none;
+  position: absolute;
+  top: 45%;
 }
 
-/*position next button to right side*/
+/*position next & prev buttons to right/left of project images*/
 .next {
-  left: 27px;
+  right: 0;
 }
 
 .prev {
-  right: 27px;
+  left: 0;
  }
 
 /* On hover increase size */
 .prev:hover, .next:hover {
   font-size: 24.2px;
-  height: 33px;
-  width: 33px;
 }
 
 /*caption text*/
@@ -464,11 +378,22 @@ ul.inline>li {
 @media only screen and (min-width: 420px) {
   header {
     height: 300px;
-    background-position: center right;
   }
 
   ul.portfolio img {
-      width: 70%;
+      width: 85%;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
+
+  section {
+    padding: 20px;
   }
 
   section > div {
@@ -483,39 +408,145 @@ ul.inline>li {
 @media only screen and (min-width: 834px) {
 
   header {
-    height: 350px;
-    background-position: top center;
+    background-image: url('./resources/bg-1440x500.png');
+    margin-top: calc(63px * 1.1);
   }
 
-  ul.portfolio img {
-    width: 70%;
+  header {
+    height: 300px;
   }
 
+  /* change layout of portfolio to 2 columns*/
+  .project {
+    display: flex;
+    margin: 30px 10px;
+  }
+
+  .slideshow-container {
+    align-items: center;
+  }
+
+
+  .left-column {
+    flex: 50%;
+    margin-right: 20px;
+  }
+
+  .next, .prev {
+    padding: 10px;
+  }
+
+  .prev {
+    left: -7px;
+  }
+
+  .next {
+    right: -5px;
+  }
+
+
+  .right-column {
+    flex: 45%;
+    margin-left: 10px;
+  }
+
+  .portfolio img {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
 
 }
 
+
+
 @media only screen and (min-width: 920px) {
-  header{
-    height: 400px;
+
+
+  /*Increase font-sizes by 10%*/
+  body, h1, h2, ul.app-metadata, .contact-form, form input, .cta, button.btn {
+    font-size: calc(16px * 1.1);
   }
 
+  .section-title, .subtext, .numbertext {
+    font-size: calc(12px * 1.1);
+  }
+
+
+   .btn, button.submit {
+    font-size: calc(14px * 1.1);
+  }
+
+  .emphasis {
+    font-size: calc(20px * 1.1);
+  }
+
+  .cta, .prev, .next {
+    font-size: calc(22px * 1.1);
+  }
+
+  .prev:hover, .next:hover {
+    font-size: calc(24px * 1.1);
+  }
+
+  header {
+    height: 400px;
+    background-image: url('./resources/bg-1440x500-sm-font.png');
+    margin-top: calc(63px * 1.2);
+
+  }
+
+  /* div.content {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  } */
+
+}
+
+
 @media only screen and (min-width: 1024px) {
-    header{
-      height: 450px;
+  header{
+    width: calc(90% - 30px);
     }
 
-@media only screen and (min-width: 1174px) {
-      header{
-        height: 500px;
-      }
 
-@media only screen and (min-width: 1300px) {
-        header{
-          height: 550px;
+@media only screen and (min-width: 1280px) {
+      /*Increase font-sizes by additional 10%*/
+  body, h1, h2, ul.app-metadata, .contact-form, form input, .cta, button.btn {
+    font-size: calc(16px * 1.2);
+  }
+
+  .section-title, .subtext, .numbertext {
+    font-size: calc(12px * 1.2);
+  }
+
+
+  .btn, button.submit {
+    font-size: calc(14px * 1.2);
+  }
+
+  .emphasis {
+    font-size: calc(20px * 1.2);
+  }
+
+  .cta, .prev, .next {
+    font-size: calc(22px * 1.2);
+  }
+
+  .prev:hover, .next:hover {
+    font-size: calc(24px * 1.2);
+  }
+}
+
+
+@media only screen and (min-width: 1360px) {
+  header{
+    width: calc(80% - 30px);
         }
 
-@media only screen and (min-width: 1420px) {
-                header{
-                  height: 600px;
-                }
+  div.content {
+    width: 80%;
+  }
+
 }
