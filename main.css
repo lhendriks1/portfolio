@@ -17,13 +17,6 @@ body {
   color: #000;
 }
 
-footer {
-  padding: 35px 0px 10px;
-  background-color: #fff;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
 
 header {
   position: relative;
@@ -41,6 +34,14 @@ header {
   margin-bottom: 15px;
 }
 
+footer {
+  padding: 35px 0px 10px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 section {
   padding: 15px;
   background-color: #fff;
@@ -54,10 +55,6 @@ div.content:nth-child(even) {
   background-color: #E4E4E4;
 }
 
-button {
-    cursor: pointer;
-}
-
 h1, h2, h3, h4 {
   font-family: 'Nanum Myeongjo', serif;
   padding: 4px;
@@ -68,35 +65,8 @@ h1, h2 {
 font-size: 16px;
 }
 
-.section-title {
-text-align: center;
-text-transform: uppercase;
-font-family: 'Open Sans', sans-serif;
-font-size: 12px;
-color: #5b5b5b;
-letter-spacing: 0.4em;
-margin: 12px;
-}
-
-.emphasis {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.bolder {
-  font-weight: 800;
-}
-
-.orange {
-  color: #E9A23F;
-}
-
-.italic {
-  font-style: italic;
+button {
+    cursor: pointer;
 }
 
 ul {
@@ -178,60 +148,6 @@ ul li.portfolio-links {
 }
 
 
-form {
-  display: grid;
-  border: none;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr 1fr 4fr .5fr;
-  grid-gap: 8px;
-  margin: 10px;
-}
-
-form input {
-  margin-bottom: 1rem;
-  padding: 4px 4px;
-  border: 1px solid #5b5b5b;
-  display: inline-block;
-  font-size: 16px;
-}
-
-#name, #email {
-  grid-column: 2 / 5;
-}
-
-label {
-  grid-column: 1 / 2;
-  text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-}
-
-input {
-    grid-column: 2 / 8;
-}
-
-button {
-  grid-column: 2/ 3;
-}
-
-.cta {
-  padding: 35px 0px 50px;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  font-size: 22px;
-}
-
-.cta > p {
-  margin: 4px;
-}
-
-.subtext {
-  font-family: helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 12px;
-  padding-bottom: 20px;
-}
-
 .cta button.btn{
   font-size: 16px;
   /* width: 75%; */
@@ -244,18 +160,8 @@ button.contact {
   padding: 8px 32px;
 }
 
-.icon {
-  height: 30px;
-}
-
 img.icon-lg {
   height: 40px;
-}
-
-.return-top {
-  position: absolute;
-  z-index: 18;
-  top: -20px;
 }
 
 ul.inline {
@@ -270,9 +176,69 @@ ul.inline>li {
   padding: 20px 10px;
 }
 
+.cta {
+  padding: 35px 0px 50px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
+
+.cta > p {
+  margin: 4px;
+}
+
+.section-title {
+text-align: center;
+text-transform: uppercase;
+font-family: 'Open Sans', sans-serif;
+font-size: 12px;
+color: #5b5b5b;
+letter-spacing: 0.4em;
+margin: 12px;
+}
+
+.emphasis {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bolder {
+  font-weight: 800;
+}
+
+.orange {
+  color: #E9A23F;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.subtext {
+  font-family: helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+.icon {
+  height: 30px;
+}
+
+.return-top {
+  position: absolute;
+  z-index: 18;
+  top: -20px;
+}
+
 /*----------Slide show styles------------*/
 
-/*hide images by default*/
+/*hide portfolio images by default, JS will show the active image*/
 .slides {
   display: none;
 }
@@ -299,7 +265,6 @@ ul.inline>li {
   font-size: 22px;
   padding: 0px;
   margin: 0px;
-  /* background-color: rgba(255, 255, 255, 0.5); */
   font-weight: 800;
   border-radius: 50%;
   user-select: none;
@@ -319,15 +284,6 @@ ul.inline>li {
 /* On hover increase size */
 .prev:hover, .next:hover {
   font-size: 24.2px;
-}
-
-/*caption text*/
-.text {
-  color: #f2f2f2;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
 }
 
 /*number text, 1/3 etc.*/
@@ -359,19 +315,54 @@ ul.inline>li {
   background-color: #5b5b5b;
 }
 
-#contact-form {
-  display: none;
+
+
+/* CSS that will eventually be used in contact form*/
+/* form {
+  display: grid;
+  border: none;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr 4fr .5fr;
+  grid-gap: 8px;
+  margin: 10px;
 }
 
+form input {
+  margin-bottom: 1rem;
+  padding: 4px 4px;
+  border: 1px solid #5b5b5b;
+  display: inline-block;
+  font-size: 16px;
+} */
+
+/* #name, #email {
+  grid-column: 2 / 5;
+}
+
+label {
+  grid-column: 1 / 2;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    grid-column: 2 / 8;
+}
+
+button {
+  grid-column: 2/ 3;
+} */
+
+/* #contact-form {
+  display: none;
+}
 
 .close {
   float: right;
   color: #5b5b5b;
   font-family: helvetica, sans-serif;
   text-transform: uppercase;
-}
-
-
+} */
 
 
 /*----------CSS for tablets--------------*/
