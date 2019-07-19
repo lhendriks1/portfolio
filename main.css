@@ -139,18 +139,14 @@ ul li.portfolio-links {
   background-color: #fff;
 }
 
-.contact-form {
-  background-color: #fff;
-  color: #000;
-  font-size: 16px;
-  text-align: left;
-  margin-top: 50px;
-}
-
 
 .cta button.btn{
   font-size: 16px;
   /* width: 75%; */
+}
+
+.cta > h2 {
+  font-size: 22px;
 }
 
 button.contact {
@@ -333,9 +329,9 @@ form input {
   border: 1px solid #5b5b5b;
   display: inline-block;
   font-size: 16px;
-} */
+}
 
-/* #name, #email {
+#name, #email {
   grid-column: 2 / 5;
 }
 
@@ -351,7 +347,15 @@ input {
 
 button {
   grid-column: 2/ 3;
-} */
+}
+
+.contact-form {
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 50px;
+}
 
 /* #contact-form {
   display: none;
@@ -480,6 +484,10 @@ button {
     font-size: calc(24px * 1.1);
   }
 
+  .cta h2 {
+    font-size: calc(22px * 1.1);
+  }
+
   header {
     height: 400px;
     background-image: url('./resources/bg-1440x500-sm-font.png');
@@ -527,6 +535,10 @@ button {
 
   .prev:hover, .next:hover {
     font-size: calc(24px * 1.2);
+  }
+
+  .cta h2 {
+    font-size: calc(22px * 1.2);
   }
 }
 
