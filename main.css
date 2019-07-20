@@ -114,7 +114,6 @@ ul li.portfolio-links {
   margin-top: 16px;
   margin-bottom: 16px;
   display: block;
-  width: 150px;
 }
 
 li .portfolio-links .btn {
@@ -501,6 +500,10 @@ button {
     background-image: url('./resources/bg-1440x500-sm-font.png');
     margin-top: calc(63px * 1.2);
 
+  }
+
+  li .portfolio-links .btn {
+    width: 175px;
   }
 
   /* div.content {
