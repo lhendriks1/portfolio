@@ -20,7 +20,7 @@ body {
 
 header {
   position: relative;
-  background-image: url('./resources/bg-300x200.png');
+  background-image: url('./resources/bg-1440x500.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -113,6 +113,14 @@ ul.portfolio li {
 ul li.portfolio-links {
   margin-top: 16px;
   margin-bottom: 16px;
+  display: block;
+  width: 150px;
+}
+
+li .portfolio-links .btn {
+  display: block;
+  margin-bottom: 8px;
+  width: 150px;
 }
 
 .btn, button.submit {
@@ -140,7 +148,7 @@ ul li.portfolio-links {
 }
 
 
-.cta button.btn{
+.cta a.btn{
   font-size: 16px;
   /* width: 75%; */
 }
@@ -149,7 +157,7 @@ ul li.portfolio-links {
   font-size: 22px;
 }
 
-button.contact {
+a.contact {
   background-color: #000;
   color: #fff;
   border-color: white;
@@ -370,7 +378,7 @@ button {
 
 
 /*----------CSS for tablets--------------*/
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 500px) {
   header {
     height: 300px;
   }

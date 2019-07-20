@@ -5,9 +5,10 @@
     <link rel="icon" href="./resources/logo-orange.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,800|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="hamburger.css">
+    <link rel="stylesheet" type="text/css" href="navigation.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="index.js"></script>
 </head>
@@ -15,7 +16,7 @@
     <nav role="navigation" class="nav">
       <img class="logo" src="./resources/logo-simple.png" alt="logo displaying letters L and H"/>
       <input class="menu-btn" type="checkbox" id="menu-btn"/>
-      <label class="menu-icon" for="menu-btn" role="checkbox"><span class="hide">Open nav menu</span><span class="navicon"></span></label>
+      <label class="menu-icon" for="menu-btn"><span class="hide">Open nav menu</span><span class="navicon"></span></label>
       <ul class="nav-content">
         <li>Welcome!<hr></li>
         <li><a href="#about" class="internal-link">About</a></li>
@@ -24,14 +25,14 @@
         <li><a href="#contact" class="internal-link">Contact</a></li>
       </ul>
     </nav>
-    <main role="main" id="top">
-        <header role="banner">
+    <main id="top">
+        <header>
         </header>
         <section id="about">
           <div class="content white">
             <h1 class="section-title">lydia hendriks</h1>
             <hr>
-            <p class="emphasis">I'm about creating <span class="uppercase bolder">stunning + efficient</span> websites that are <span class="italic orange">natural + fun</span> to interact with. Using <span class="uppercase bolder">powerful backend-tech</span> to keep websites <span class="italic orange">clean + maintainable</span>.
+            <p class="emphasis">I'm about creating <span class="uppercase bolder">stunning + efficient</span> sites that are <span class="italic orange">natural + fun</span> to interact with. Using <span class="uppercase bolder">modern</span> web technologies to keep sites <span class="italic orange">clean + maintainable</span>.
             <hr>
             <p>I'm a full stack developer based out of Tampa, FL. I love bringing life to stunning designs that promote a fluid user experience.</p>
             <p>My background is in management consulting, which gave me ample experience working with stakeholders to understand business needs and design solutions. I repeatedly saw that 1.) web applications were the answers to many of my clients' problems and 2.) many organizations are in <span class="italic">desperate need</span> of more web capabilities.</p>
@@ -104,10 +105,11 @@
         <section id="contact" class="cta">
             <h2>Want to work together?</h2>
             <p class="subtext">I'd love to chat.</p>
-            <a href="mailto:hendriks.lydia@gmail.com"><button class="btn contact js-contact-show">Contact &#8594;</button></a>
+            <a class="btn contact" href="mailto:hendriks.lydia@gmail.com">Contact &#8594;</a>
 
 
             <!--Contact form to be implemented later-->
+            <!-- <button class="btn contact js-contact-show">Contact &#8594;</button> -->
             <!-- <div id="contact-form" class="contact-form">
               <button type="button" class="close">x close</button>
               <h2 class="section-title">Contact</h2>

@@ -103,7 +103,6 @@ hideArrowButtons(slideIndex);
 
 //Updates index based on button parameter, then updates image
 function updateImage(button) {
-  console.log('PresentImage called with button ' + button);
 
   //Update necessary elements of active index
   imageArray[slideIndex].show();
@@ -177,7 +176,6 @@ function scrollToAnchors(){
   $("a[href^=#].internal-link").click(function(e) {
     e.preventDefault();
     var dest = $(this).attr('href');
-    console.log(dest);
     $('html,body').animate({ scrollTop: $(dest).offset().top-100 }, 'slow');
   });
 }

@@ -163,6 +163,7 @@ ul.nav-content>li:first-child {
    border: 2px solid #E5A449;
    border-radius: 4px;
    background-color: white;
+   padding: 2px 6px;
  }
 
 }
