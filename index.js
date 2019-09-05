@@ -48,12 +48,14 @@ var PREV_BUTTON = -1;
 var NEXT_BUTTON = 1;
 
 
+
+
 // Push all items with class 'slides' into the array
-function createArray(imageArray) {
-$('.slides').each(function() {
-      imageArray.push($(this));
-    });
-}
+// function createArray(imageArray) {
+// $('.slides').each(function() {
+//       imageArray.push($(this));
+//     });
+// }
 
 function styleDot(slideIndex) {
   if (slideIndex == 0) {
@@ -165,7 +167,7 @@ function handleImageSlider() {
   setupCallbacks();
 }
 
-$(handleImageSlider);
+// $(handleImageSlider);
 
 //END ----IMAGE SLIDER FUNCTIONS---------------------------------------------------
 
