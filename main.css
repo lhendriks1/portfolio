@@ -453,6 +453,9 @@ button {
   }
 
   .portfolio img {
+    /* border: 1px solid gray; */
+    box-shadow: 0 0 6px #000000;
+    border-radius: 6px;
     padding: 0px;
     margin: 0px;
     width: 100%;
