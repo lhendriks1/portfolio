@@ -65,7 +65,7 @@ h1, h2 {
 font-size: 16px;
 }
 
-button {
+button, a {
     cursor: pointer;
 }
 
@@ -191,7 +191,7 @@ ul.inline>li {
   margin: 4px;
 }
 
-.section-title {
+.title {
 text-align: center;
 text-transform: uppercase;
 font-family: 'Open Sans', sans-serif;
@@ -473,7 +473,7 @@ button {
     font-size: calc(16px * 1.1);
   }
 
-  .section-title, .subtext, .numbertext {
+  .title, .subtext, .numbertext {
     font-size: calc(12px * 1.1);
   }
 
@@ -530,7 +530,7 @@ button {
     font-size: calc(16px * 1.2);
   }
 
-  .section-title, .subtext, .numbertext {
+  .title, .subtext, .numbertext {
     font-size: calc(12px * 1.2);
   }
 
