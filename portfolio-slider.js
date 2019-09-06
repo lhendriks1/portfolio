@@ -31,9 +31,9 @@ const projectsArr = {
   whereToEat: {
     id: "whereToEat",
     current_index: 0,
-    title: "Where to Eat Out",
-    summary: "The app helps users plan eating out based on user input for location and cuisine. Results include a list of venues that users could visit after their initial destination.",
-    tech: "Technologies used: HTML, CSS, JavaScript, jQuery, foursquare API",
+    title: "Eat Out App",
+    summary: "The app helps users plan eating out based on user input for location and cuisine. Results include a list of venues that users can visit after their initial destination.",
+    tech: "Technologies used: HTML, CSS, JavaScript, jQuery, Foursquare API",
     link_live: "https://lhendriks1.github.io/where-to-eat-out/",
     link_repo: "https://github.com/lhendriks1/where-to-eat-out",
     images: [{
