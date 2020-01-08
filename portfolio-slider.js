@@ -5,25 +5,50 @@ const NEXT_BUTTON = 1;
 
 
 const projectsArr = {
+  askify: {
+    id: "askify",
+    current_index: 0,
+    title: "Askify",
+    summary: "Askify is full stack question answer engine featuring a JWT authentication system that uses bcrypt to salt and hash passwords. The Askify server follows REST API design principles and adheres to code best practicies including SOC, encapsulation, and DRY. The server was built using TDD methodology.",
+    tech: "Technologies used: React, Node, Express, Postgres, SQL, JWT, Supertest, Mocha, Chai, Jest, Enzyme, Zeit, Heroku, Git",
+    link_live: "https://askify.now.sh/",
+    link_repo: "https://github.com/lhendriks1/askify-app",
+    images: [
+      {
+        src: "./resources/askify_img1.png",
+        alt: "questions list screenshot"
+      },
+      {
+        src: "./resources/askify_img2.png",
+        alt: "question screenshot"
+      },
+      {
+        src: "./resources/askify_img3.png",
+        alt: "new question form screenshot"
+      }
+    ]
+  },
+
   boatQuiz: {
     id: "boatQuiz",
     current_index: 0,
     title: "Boating Safety Quiz",
     summary: "The Boating Safety Quiz app tests users' knowledge of boating safety rules and best practices. This quiz was inspired by my fiancee who is an avid boater. I made sure he passed this quiz before taking me out.",
-    tech: "Technologies used: HTML, CSS, JavaScript, jQuery",
+    tech: "Technologies used: HTML, CSS, JavaScript, jQuery, Git",
     link_live: "https://lhendriks1.github.io/boating-safety-quiz/",
     link_repo: "https://github.com/lhendriks1/boating-safety-quiz",
-    images: [{
+    images: [
+      {
         src: "./resources/boat-quiz-img1.png",
-        alt: "start quiz screen"
+        alt: "start quiz screenshot"
       },
       {
         src: "./resources/boat-quiz-img2.png",
-        alt: "quiz question screen"
+        alt: "quiz question screenshot"
       },
       {
         src: "./resources/boat-quiz-img3.png",
-        alt: "quiz results screen"
+        alt: "quiz results screenshot"
       }
     ]
   },
@@ -32,24 +57,25 @@ const projectsArr = {
     id: "whereToEat",
     current_index: 0,
     title: "Eat Out App",
-    summary: "The app helps users plan eating out based on user input for location and cuisine. Results include a list of venues that users can visit after their initial destination.",
-    tech: "Technologies used: HTML, CSS, JavaScript, jQuery, Foursquare API",
+    summary: "The Eat Out app helps users plan eating out based on user input for location and cuisine. Results include a list of venues that users can visit after their initial destination.",
+    tech: "Technologies used: HTML, CSS, JavaScript, jQuery, Foursquare API, Git",
     link_live: "https://lhendriks1.github.io/where-to-eat-out/",
     link_repo: "https://github.com/lhendriks1/where-to-eat-out",
-    images: [{
+    images: [
+      {
         src: "./resources/where-to-eat-img1.png",
-        alt: "search screen"
+        alt: "search screenshot"
       },
       {
         src: "./resources/where-to-eat-img2.png",
-        alt: "results screen"
+        alt: "results screenshot"
       },
       {
         src: "./resources/where-to-eat-img3.png",
-        alt: "next venues screen"
+        alt: "next venues screenshot"
       }
     ]
-  }
+  },
 };
 
 function addProjects() {
